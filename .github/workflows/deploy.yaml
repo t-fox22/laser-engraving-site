@@ -3,10 +3,10 @@ name: Deploy Astro site to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main  # Change if your default branch is different
 
 permissions:
-  contents: write  # needed to push to gh-pages branch
+  contents: write  # Allows the workflow to push to gh-pages
 
 jobs:
   build-and-deploy:
@@ -32,4 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          force_orphan: true  # Optional: ensures clean deploy, can fix some issues
+          force_orphan: true  # Optional: clean deploy to avoid conflicts
