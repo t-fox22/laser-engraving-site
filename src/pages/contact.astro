@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact Us">
+  <section class="py-10 max-w-xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">Get in Touch</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="grid gap-4">
+      <input type="text" name="name" placeholder="Your Name" required class="border p-2 rounded" />
+      <input type="email" name="email" placeholder="Your Email" required class="border p-2 rounded" />
+      <textarea name="message" rows="5" placeholder="Your Message" required class="border p-2 rounded"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
+    </form>
+  </section>
+</BaseLayout>
